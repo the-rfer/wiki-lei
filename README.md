@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 UAb Engenharia Informática - Wiki
 
-## Getting Started
+Este repositório tem como objetivo **simplificar e melhorar a experiência de navegação** do [wiki original da UAb](https://wiki.dcet.uab.pt/files/index.php/Categoria:Engenharia_Inform%C3%A1tica), tornando a informação mais acessível, organizada e com uma interface moderna.
 
-First, run the development server:
+👉 Este portal não substitui o wiki oficial, mas serve como uma **ferramenta complementar para estudantes** da Licenciatura em Engenharia Informática, com pesquisa rápida, tópicos agrupados e uma UX/UI mais intuitiva.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Funcionalidades (em desenvolvimento)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+-   Pesquisa com fuzzy search em todos os tópicos da wiki
+-   Índice reorganizado e simplificado (sem redundâncias)
+-   Destaque para tópicos mais importantes (Guia Informativo Oficial, Plano de Estudos, Disciplinas, etc.)
+-   Layout moderno, responsivo e mobile-first
+-   Contribuições abertas à comunidade estudantil
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠️ Instalação e Execução Local
 
-To learn more about Next.js, take a look at the following resources:
+1. Clonar o repositório:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    ```bash
+    git clone https://github.com/the-rfer/wiki-lei.git
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Entrar na pasta do projeto:
 
-## Deploy on Vercel
+    ```bash
+    cd wiki-lei
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Instalar as dependências:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    ```bash
+    npm install
+    ```
+
+    ou
+
+    ```bash
+    yarn install
+    ```
+
+4. Executar em ambiente de desenvolvimento:
+
+    ```bash
+    npm run dev
+    ```
+
+    O projeto ficará disponível em [http://localhost:3000](http://localhost:3000).
+
+---
+
+## 🤝 Contribuições
+
+Este é um projeto **colaborativo** feito por estudantes e para estudantes.
+Se quiseres ajudar:
+
+1. Faz um fork do repositório
+2. Cria uma branch para a tua contribuição (`git checkout -b minha-contribuicao`)
+3. Faz commit das alterações (`git commit -m "Descrição da alteração"`)
+4. Envia um Pull Request
+
+Todas as contribuições são bem-vindas: melhorias no design, organização da informação, correções ou novas funcionalidades!
+
+---
+
+## ⚖️ Aviso
+
+Este projeto é **não oficial** e não substitui a informação publicada pela Universidade Aberta.
+Apenas organiza e apresenta os conteúdos do wiki original de forma mais acessível.
+
+---
+
+### 📚 Licença
+
+MIT – uso livre para a comunidade.
