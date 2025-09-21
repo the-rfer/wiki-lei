@@ -1,3 +1,5 @@
+'use client';
+
 import { ComponentProps } from 'react';
 import {
     ChevronRight,
@@ -33,8 +35,10 @@ import { InlineCode } from './typography';
 import { isIos } from '@/lib/utils';
 import { NAV_LINKS as data } from '@/static/nav-links';
 import { SearchModal } from './search-modal';
+import { usePathname } from 'next/navigation';
 
 export function AppSidebar({ ...props }: ComponentProps<typeof Sidebar>) {
+    const pathname = usePathname();
     return (
         <Sidebar {...props}>
             <SidebarHeader>
@@ -61,7 +65,10 @@ export function AppSidebar({ ...props }: ComponentProps<typeof Sidebar>) {
                     <SidebarMenu>
                         <SidebarMenuItem>
                             <SidebarMenuButton asChild>
-                                <Link href={'https://portal.uab.pt/'}>
+                                <Link
+                                    href={'https://portal.uab.pt/'}
+                                    target='_blank'
+                                >
                                     <Globe />
                                     <span>Site oficial UAb</span>
                                     <ArrowUpRight className='opacity-0 group-hover/menu-item:opacity-100 ml-auto transition-opacity' />
@@ -74,6 +81,7 @@ export function AppSidebar({ ...props }: ComponentProps<typeof Sidebar>) {
                                     href={
                                         'https://wiki.dcet.uab.pt/files/index.php/Categoria:Engenharia_Inform%C3%A1tica?fbclid=IwAR1J4KKJxHX8oLQY-KYxV-LRzqTMyxoYQqfdIngzz7lS1XfE-kcSOGFUT4c'
                                     }
+                                    target='_blank'
                                 >
                                     <BookMarked />
                                     <span>Wiki Oficial</span>
@@ -87,6 +95,7 @@ export function AppSidebar({ ...props }: ComponentProps<typeof Sidebar>) {
                                     href={
                                         'https://guiadoscursos.uab.pt/cursos/licenciatura-em-engenharia-informatica/'
                                     }
+                                    target='_blank'
                                 >
                                     <GraduationCap />
                                     <span>Página do curso</span>
@@ -122,33 +131,36 @@ export function AppSidebar({ ...props }: ComponentProps<typeof Sidebar>) {
                                     <SidebarGroupContent>
                                         <SidebarMenu>
                                             <SidebarMenuSub>
-                                                {item.items.map((item) => (
-                                                    <SidebarMenuItem
-                                                        key={item.title}
-                                                    >
-                                                        <SidebarMenuButton
-                                                            asChild
-                                                            // TODO: Ativar baseado na rota
-                                                            // isActive={
-                                                            //     item.isActive
-                                                            // }
-                                                            size={
-                                                                (item.size as
-                                                                    | 'lg'
-                                                                    | 'default'
-                                                                    | 'sm') ||
-                                                                'default'
-                                                            }
+                                                {item.items &&
+                                                    item.items.map((item) => (
+                                                        <SidebarMenuItem
+                                                            key={item.title}
                                                         >
-                                                            <Link
-                                                                href={item.url}
-                                                                className='block'
+                                                            <SidebarMenuButton
+                                                                asChild
+                                                                isActive={
+                                                                    pathname ===
+                                                                    item.url
+                                                                }
+                                                                size={
+                                                                    (item.size as
+                                                                        | 'lg'
+                                                                        | 'default'
+                                                                        | 'sm') ||
+                                                                    'default'
+                                                                }
                                                             >
-                                                                {item.title}
-                                                            </Link>
-                                                        </SidebarMenuButton>
-                                                    </SidebarMenuItem>
-                                                ))}
+                                                                <Link
+                                                                    href={
+                                                                        item.url
+                                                                    }
+                                                                    className='block'
+                                                                >
+                                                                    {item.title}
+                                                                </Link>
+                                                            </SidebarMenuButton>
+                                                        </SidebarMenuItem>
+                                                    ))}
                                             </SidebarMenuSub>
                                         </SidebarMenu>
                                     </SidebarGroupContent>
@@ -163,7 +175,7 @@ export function AppSidebar({ ...props }: ComponentProps<typeof Sidebar>) {
                     <SidebarMenuItem>
                         <SidebarMenuButton>
                             <SearchModal>
-                                <Search />
+                                <Search className='size-4' />
                                 <span>Procurar</span>
                                 <div className='space-x-1 ml-auto text-sm'>
                                     <InlineCode>
@@ -176,7 +188,10 @@ export function AppSidebar({ ...props }: ComponentProps<typeof Sidebar>) {
                     </SidebarMenuItem>
                     <SidebarMenuItem>
                         <SidebarMenuButton asChild>
-                            <Link href={'https://github.com/the-rfer'}>
+                            <Link
+                                href={'https://github.com/the-rfer/wiki-lei'}
+                                target='_blank'
+                            >
                                 <Github />
                                 <span>Contribuir</span>
                                 <ArrowUpRight className='opacity-0 group-hover/menu-item:opacity-100 ml-auto transition-opacity' />

@@ -21,7 +21,13 @@ import {
 } from '@/components/ui/command';
 import { searchWiki } from '@/lib/fuse';
 
-export function SearchModal({ children }: { children?: ReactNode }) {
+export function SearchModal({
+    children,
+    useClass = true,
+}: {
+    children?: ReactNode;
+    useClass?: boolean;
+}) {
     const [open, setOpen] = useState(false);
     const [query, setQuery] = useState('');
 
@@ -43,7 +49,11 @@ export function SearchModal({ children }: { children?: ReactNode }) {
         <>
             <div
                 onClick={() => setOpen(true)}
-                className='peer/menu-button flex items-center gap-2 data-[active=true]:bg-sidebar-accent data-[state=open]:hover:bg-sidebar-accent active:bg-sidebar-accent aria-disabled:opacity-50 disabled:opacity-50 group-data-[collapsible=icon]:p-2! group-has-data-[sidebar=menu-action]/menu-item:pr-8 rounded-md outline-hidden ring-sidebar-ring focus-visible:ring-2 w-full [&>svg]:size-4 group-data-[collapsible=icon]:size-8! overflow-hidden data-[active=true]:font-medium text-sm text-left [&>span:last-child]:truncate transition-[width,height,padding] data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:text-sidebar-accent-foreground active:text-sidebar-accent-foreground cursor-pointer aria-disabled:pointer-events-none disabled:pointer-events-none [&>svg]:shrink-0'
+                className={
+                    useClass
+                        ? 'peer/menu-button flex items-center gap-2 data-[active=true]:bg-sidebar-accent data-[state=open]:hover:bg-sidebar-accent active:bg-sidebar-accent aria-disabled:opacity-50 disabled:opacity-50 group-data-[collapsible=icon]:p-2! group-has-data-[sidebar=menu-action]/menu-item:pr-8 rounded-md outline-hidden ring-sidebar-ring focus-visible:ring-2 w-full [&>svg]:size-4 group-data-[collapsible=icon]:size-8! overflow-hidden data-[active=true]:font-medium text-sm text-left [&>span:last-child]:truncate transition-[width,height,padding] data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:text-sidebar-accent-foreground active:text-sidebar-accent-foreground cursor-pointer aria-disabled:pointer-events-none disabled:pointer-events-none [&>svg]:shrink-0'
+                        : ''
+                }
             >
                 {children}
             </div>

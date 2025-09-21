@@ -1,20 +1,27 @@
-export const NAV_LINKS = [
+export type NavItem = {
+    title: string;
+    url: string;
+    size?: string;
+    items?: NavItem[];
+};
+
+export const NAV_LINKS: NavItem[] = [
     {
         title: 'Informações Gerais',
         url: '#',
         items: [
             {
                 title: 'Guia Informativo Oficial',
-                url: '#',
+                url: '/guia-informativo',
             },
             {
                 title: 'Apresentação da Licenciatura',
-                url: '#',
+                url: '/apresentacao-licenciatura',
                 size: 'lg',
             },
             {
                 title: 'História e evolução do curso',
-                url: '#',
+                url: '/historia-curso',
                 size: 'lg',
             },
         ],
@@ -25,11 +32,11 @@ export const NAV_LINKS = [
         items: [
             {
                 title: 'Plano de Estudos',
-                url: '#',
+                url: '/plano-estudos',
             },
             {
                 title: 'Precedências de Unidades Curriculares',
-                url: '#',
+                url: '/precedencias-uc',
                 size: 'lg',
             },
         ],
@@ -40,16 +47,16 @@ export const NAV_LINKS = [
         items: [
             {
                 title: 'Regulamento e critérios de Avaliação',
-                url: '#',
+                url: '/regulamento',
                 size: 'lg',
             },
             {
                 title: 'Calendário Académico',
-                url: '#',
+                url: '/calendario',
             },
             {
                 title: 'Arquivo de calendários anteriores',
-                url: '#',
+                url: '/arquivo',
                 size: 'lg',
             },
         ],
@@ -60,17 +67,17 @@ export const NAV_LINKS = [
         items: [
             {
                 title: 'Módulo de Ambientação Online (MAO)',
-                url: '#',
+                url: '/mao',
                 size: 'lg',
             },
             {
                 title: 'Ferramentas de estudo e apoio',
-                url: '#',
+                url: '/ferramentas',
                 size: 'lg',
             },
             {
                 title: 'Dicas e informações úteis',
-                url: '#',
+                url: '/dicas',
             },
         ],
     },
@@ -80,15 +87,15 @@ export const NAV_LINKS = [
         items: [
             {
                 title: 'Perguntas Frequentes',
-                url: '#',
+                url: '/faq',
             },
             {
                 title: 'Apoio e Motivação',
-                url: '#',
+                url: '/apoio',
             },
             {
                 title: 'Grupos e Canais Sociais',
-                url: '#',
+                url: '/grupos',
             },
         ],
     },
@@ -98,11 +105,11 @@ export const NAV_LINKS = [
         items: [
             {
                 title: 'Descontos',
-                url: '#',
+                url: '/descontos',
             },
             {
                 title: 'Outros apoios institucionais',
-                url: '#',
+                url: '/outros-apoios',
                 size: 'lg',
             },
         ],

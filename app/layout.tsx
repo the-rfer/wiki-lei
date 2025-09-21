@@ -1,28 +1,17 @@
 import type { Metadata } from 'next';
 import { ThemeProvider } from '@/components/theme-provider';
 import { AppSidebar } from '@/components/app-sidebar';
-import {
-    Breadcrumb,
-    BreadcrumbItem,
-    BreadcrumbLink,
-    BreadcrumbList,
-    BreadcrumbPage,
-    BreadcrumbSeparator,
-} from '@/components/ui/breadcrumb';
-import { Separator } from '@/components/ui/separator';
-import {
-    SidebarInset,
-    SidebarProvider,
-    SidebarTrigger,
-} from '@/components/ui/sidebar';
-import { ModeToggle } from '@/components/mode-toggle';
-
+import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar';
+import { Toaster } from '@/components/ui/sonner';
+import Header from '@/components/header';
+import Footer from '@/components/footer';
 import './globals.css';
 
 export const metadata: Metadata = {
     title: 'Wiki Engenharia Informática UAb',
     description:
         'Acesso rápido e organizado aos recursos da wiki da Universidade Aberta para estudantes de Engenharia Informática',
+    keywords: ['wiki', 'informática', 'UAb'],
 };
 
 export default function RootLayout({
@@ -42,32 +31,12 @@ export default function RootLayout({
                     <SidebarProvider>
                         <AppSidebar />
                         <SidebarInset>
-                            <header className='top-0 sticky flex items-center gap-2 bg-background px-4 border-b h-16 shrink-0'>
-                                <SidebarTrigger className='-ml-1' />
-                                <Separator
-                                    orientation='vertical'
-                                    className='mr-2 h-4'
-                                />
-                                <Breadcrumb>
-                                    <BreadcrumbList>
-                                        <BreadcrumbItem className='hidden md:block'>
-                                            <BreadcrumbLink href='#'>
-                                                Building Your Application
-                                            </BreadcrumbLink>
-                                        </BreadcrumbItem>
-                                        <BreadcrumbSeparator className='hidden md:block' />
-                                        <BreadcrumbItem>
-                                            <BreadcrumbPage>
-                                                Data Fetching
-                                            </BreadcrumbPage>
-                                        </BreadcrumbItem>
-                                    </BreadcrumbList>
-                                </Breadcrumb>
-                                <ModeToggle className='ml-auto' />
-                            </header>
+                            <Header />
                             <main className='flex flex-col flex-1 gap-4'>
                                 {children}
                             </main>
+                            <Toaster position='top-center' />
+                            <Footer />
                         </SidebarInset>
                     </SidebarProvider>
                 </ThemeProvider>
