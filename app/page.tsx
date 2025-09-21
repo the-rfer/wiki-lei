@@ -1,6 +1,7 @@
 import { SearchModal } from '@/components/search-modal';
 import { Search } from 'lucide-react';
 import TopicsGrid from '@/components/topics';
+import ContributeCta from '@/components/contribute-cta';
 
 export default function Home() {
     return (
@@ -8,6 +9,7 @@ export default function Home() {
             <div className='bg-gradient-to-b from-muted/30 to-background'>
                 <div className='mx-auto px-4 py-16 text-center container'>
                     <div className='mx-auto max-w-4xl'>
+                        <ContributeCta />
                         <h1 className='mb-6 font-bold text-foreground text-4xl md:text-6xl text-balance'>
                             Recursos de Engenharia Informática
                         </h1>

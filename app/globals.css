@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-    --background: oklch(0.9653 0.0069 247.8959);
+    --background: oklch(97.913% 0.00011 271.152);
     --foreground: oklch(0.1635 0.0425 246.439);
     --card: oklch(1 0 0);
     --card-foreground: oklch(0.1635 0.0425 246.439);
@@ -168,6 +168,14 @@
     --tracking-wide: calc(var(--tracking-normal) + 0.025em);
     --tracking-wider: calc(var(--tracking-normal) + 0.05em);
     --tracking-widest: calc(var(--tracking-normal) + 0.1em);
+
+    --animate-gradient: gradient 8s linear infinite;
+
+    @keyframes gradient {
+        to {
+            background-position: var(--bg-size, 300%) 0;
+        }
+    }
 }
 
 body {

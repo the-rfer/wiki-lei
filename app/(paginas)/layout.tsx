@@ -6,7 +6,8 @@ export default function WikiLayout({
     return (
         <div className='flex'>
             <section className='flex flex-col flex-1 gap-4'>{children}</section>
-            <aside>Sidebar </aside>
+            {/* Placeholder caso pretenda adicionar sidebar em cada route no futuro - documentation nav style 
+                <aside>Sidebar </aside> */}
         </div>
     );
 }

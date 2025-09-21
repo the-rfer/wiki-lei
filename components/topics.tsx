@@ -96,13 +96,13 @@ export default function TopicsGrid() {
                 return (
                     <Card
                         key={topic.id}
-                        className='group bg-card hover:shadow-lg border-border h-full hover:scale-105 transition-all duration-200 cursor-pointer'
+                        className='bg-card hover:shadow-lg border-border h-full'
                     >
                         <CardHeader className='pb-4 text-center'>
-                            <div className='bg-primary/10 group-hover:bg-primary/20 mx-auto mb-4 p-3 rounded-full w-fit transition-colors'>
+                            <div className='bg-primary/10 mx-auto mb-4 p-3 rounded-full w-fit'>
                                 <IconComponent className='w-8 h-8 text-primary' />
                             </div>
-                            <CardTitle className='text-card-foreground group-hover:text-primary text-lg transition-colors'>
+                            <CardTitle className='text-card-foreground text-lg'>
                                 {topic.title}
                             </CardTitle>
                         </CardHeader>
