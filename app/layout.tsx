@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { ThemeProvider } from '@/components/theme-provider';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { AppSidebar } from '@/components/app-sidebar';
 import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar';
 import { Toaster } from '@/components/ui/sonner';
@@ -40,6 +42,8 @@ export default function RootLayout({
                         </SidebarInset>
                     </SidebarProvider>
                 </ThemeProvider>
+                <Analytics />
+                <SpeedInsights />
             </body>
         </html>
     );
