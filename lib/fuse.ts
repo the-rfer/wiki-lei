@@ -1,46 +1,87 @@
+'use client';
+
 import Fuse from 'fuse.js';
-import { NAV_LINKS as links } from '@/static/nav-links';
+import { ALL_PAGES as pages } from '@/static/search-data';
 
-//TODO: adicionar todo o conteudo das páginas
-const fuse = new Fuse(links, {
-    keys: ['title', 'items.title'],
-    includeMatches: true, // gives us positions of matches
-    threshold: 0.3,
-});
+export type SearchWikiResult =
+    | {
+          results: {
+              id: string;
+              type: string;
+              title: string;
+              url: string;
+              snippets: string[];
+          }[];
+      }
+    | {
+          results: [];
+      };
 
-export function searchWiki(query: string) {
-    const results = fuse.search(query);
+/**
+ * Procurar conteúdo em toda a wiki
+ * @param query string para dar match
+ */
+export function searchWiki(query: string): SearchWikiResult {
+    if (!query.trim()) return { results: [] };
 
-    return results.map((result) => {
-        const { item, matches } = result;
-
-        const snippets: string[] = [];
-
-        matches?.forEach((m) => {
-            const text = item.title;
-
-            m.indices.forEach(([start, end]) => {
-                // Get surrounding sentence
-                const before = text.lastIndexOf('.', start) + 1;
-                const after = text.indexOf('.', end);
-                const sentence = text.slice(before, after + 1).trim();
-
-                // Highlight the matched substring
-                const highlighted =
-                    sentence.slice(0, start - before) +
-                    `<mark>` +
-                    sentence.slice(start - before, end - before + 1) +
-                    `</mark>` +
-                    sentence.slice(end - before + 1);
-
-                snippets.push(highlighted);
-            });
-        });
-
-        return {
-            id: item.url,
-            title: item.title,
-            snippets: [...new Set(snippets)], // remove duplicates
-        };
+    const fuse = new Fuse(pages, {
+        keys: ['title', 'content'],
+        includeMatches: true,
+        threshold: 0,
+        minMatchCharLength: query.length,
+        ignoreDiacritics: true,
+        shouldSort: true,
+        findAllMatches: false,
+        ignoreLocation: true,
     });
+
+    const results = fuse.search(query, { limit: 10 });
+
+    return {
+        results: results.map((result) => {
+            const { item, matches } = result;
+
+            const snippets: string[] = [];
+
+            matches?.forEach((m) => {
+                if (m.value && m.indices) {
+                    const highlighted = highlightIndices(m.value, m.indices);
+                    snippets.push(highlighted);
+                }
+            });
+
+            return {
+                id: `${item.url}-${result.refIndex}`,
+                type: 'page',
+                title: item.title,
+                url: item.url,
+                snippets: [
+                    ...snippets.slice(0, 3),
+                    ...(snippets.length > 3
+                        ? [`+${snippets.length - 3} resultados nesta página.`]
+                        : []),
+                ],
+            };
+        }),
+    };
+}
+
+function highlightIndices(
+    value: string,
+    indices: readonly [number, number][]
+): string {
+    if (!indices || !indices.length) return value;
+
+    let result = '';
+    let lastIndex = 0;
+
+    for (const [start, end] of indices) {
+        result += value.slice(lastIndex, start);
+        result += `<mark>${value.slice(start, end + 1)}</mark>`;
+        lastIndex = end + 1;
+    }
+
+    result += value.slice(lastIndex);
+
+    return result;
 }

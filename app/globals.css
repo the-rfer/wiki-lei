@@ -208,6 +208,10 @@ body {
     scrollbar-color: var(--color-primary) transparent;
 }
 
+mark {
+    @apply bg-transparent dark:text-white underline;
+}
+
 @layer base {
     * {
         @apply border-border outline-ring/50;

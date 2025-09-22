@@ -2,15 +2,6 @@
 
 import { ReactNode, useState, useEffect } from 'react';
 import {
-    Calculator,
-    Calendar,
-    CreditCard,
-    Settings,
-    Smile,
-    User,
-} from 'lucide-react';
-
-import {
     CommandDialog,
     CommandEmpty,
     CommandGroup,
@@ -19,21 +10,39 @@ import {
     CommandList,
     CommandSeparator,
 } from '@/components/ui/command';
-import { searchWiki } from '@/lib/fuse';
+import { searchWiki, type SearchWikiResult } from '@/lib/fuse';
+import { useRouter } from 'next/navigation';
+
+const pages = [
+    { id: 'MAO', title: 'Módulo de Ambientação Online (MAO)', url: '/mao' },
+    {
+        id: 'GUIA-CURSO',
+        title: 'Guia Informativo Oficial',
+        url: '/guia-informativo',
+    },
+    { id: 'PLANO-ESTUDOS', title: 'Plano de Estudos', url: '/plano-estudos' },
+];
 
 export function SearchModal({
     children,
     useClass = true,
+    shouldKbdShortcutTrigger = true,
 }: {
     children?: ReactNode;
     useClass?: boolean;
+    shouldKbdShortcutTrigger?: boolean;
 }) {
+    const router = useRouter();
     const [open, setOpen] = useState(false);
     const [query, setQuery] = useState('');
+    const [recent, setRecent] = useState<
+        { id: string; title: string; url: string }[]
+    >([]);
 
-    const results = query ? searchWiki(query) : [];
+    const { results } = searchWiki(query) as SearchWikiResult;
 
     useEffect(() => {
+        if (!shouldKbdShortcutTrigger) return;
         const down = (e: KeyboardEvent) => {
             if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
                 e.preventDefault();
@@ -43,7 +52,32 @@ export function SearchModal({
 
         document.addEventListener('keydown', down, { capture: true });
         return () => document.removeEventListener('keydown', down);
+    }, [shouldKbdShortcutTrigger]);
+
+    useEffect(() => {
+        const saved = localStorage.getItem('recentSearches');
+        if (saved) setRecent(JSON.parse(saved));
     }, []);
+
+    const handleSelect = (title: string, url: string, id: string) => {
+        // evitar dupes entre mais procurados e recentes
+        if (pages.some((page) => page.id === id)) {
+            router.push(url);
+            setOpen(false);
+            return;
+        }
+
+        setRecent((prev) => {
+            const updated = [
+                { id, title, url },
+                ...prev.filter((item) => item.title !== title),
+            ].slice(0, 5);
+            localStorage.setItem('recentSearches', JSON.stringify(updated));
+            return updated;
+        });
+        router.push(url);
+        setOpen(false);
+    };
 
     return (
         <>
@@ -64,49 +98,90 @@ export function SearchModal({
                     onValueChange={setQuery}
                 />
                 <CommandList>
-                    {results.length === 0 && query && (
-                        <CommandEmpty>Nenhum resultado.</CommandEmpty>
-                    )}
-
-                    {results.map((item) => (
-                        <CommandItem key={item.id} value={item.title}>
-                            <div className='flex flex-col'>
-                                <span className='font-medium'>
-                                    {item.title}
-                                </span>
-                                {item.snippets.length > 0 && (
-                                    <span
-                                        className='text-muted-foreground text-sm'
-                                        // ⚠️ safe if snippets only contain <mark>, otherwise sanitize!
-                                        dangerouslySetInnerHTML={{
-                                            __html: item.snippets[0],
-                                        }}
-                                    />
+                    {query ? (
+                        <>
+                            <CommandGroup heading='Resultados'>
+                                {results.map((item) => (
+                                    <CommandItem
+                                        key={item.id}
+                                        onSelect={() =>
+                                            handleSelect(
+                                                item.title,
+                                                item.url,
+                                                item.id
+                                            )
+                                        }
+                                        className='flex flex-col gap-1'
+                                    >
+                                        <div className='w-full'>
+                                            <p className='font-bold'>
+                                                {item.title}
+                                            </p>
+                                            {item.snippets.map(
+                                                (snippet, index) => (
+                                                    <div
+                                                        key={index}
+                                                        dangerouslySetInnerHTML={{
+                                                            __html: snippet,
+                                                        }}
+                                                    />
+                                                )
+                                            )}
+                                        </div>
+                                    </CommandItem>
+                                ))}
+                                {results.length === 0 && (
+                                    <CommandEmpty>
+                                        Nenhum resultado encontrado.
+                                    </CommandEmpty>
                                 )}
-                            </div>
-                        </CommandItem>
-                    ))}
+                            </CommandGroup>
+                            <CommandSeparator />
+                        </>
+                    ) : (
+                        <>
+                            <CommandGroup heading='Mais procurados'>
+                                {pages.map((item) => (
+                                    <CommandItem
+                                        key={item.url}
+                                        onSelect={() =>
+                                            handleSelect(
+                                                item.title,
+                                                item.url,
+                                                item.id
+                                            )
+                                        }
+                                    >
+                                        {item.title}
+                                    </CommandItem>
+                                ))}
+                            </CommandGroup>
+
+                            {recent.length > 0 && (
+                                <>
+                                    <CommandSeparator />
+                                    <CommandGroup heading='Pesquisas recentes'>
+                                        {recent.map((item) => (
+                                            <CommandItem
+                                                key={item.title}
+                                                onSelect={() =>
+                                                    handleSelect(
+                                                        item.title,
+                                                        item.url,
+                                                        item.id
+                                                    )
+                                                }
+                                            >
+                                                {item.title}
+                                            </CommandItem>
+                                        ))}
+                                    </CommandGroup>
+                                </>
+                            )}
+                        </>
+                    )}
                 </CommandList>
             </CommandDialog>
         </>
     );
 }
-
-// <CommandEmpty>Nenhum resultado encontrado.</CommandEmpty>
-// {/* TODO: Implementar ultimas pesquisas */}
-
-// {/* <CommandGroup heading='Últimas pesquisas'>
-
-// </CommandGroup> */}
-// <CommandSeparator />
-// <CommandGroup heading='Mais procurados'>
-//     <CommandItem>
-//         <span>Profile</span>
-//     </CommandItem>
-//     <CommandItem>
-//         <span>Billing</span>
-//     </CommandItem>
-//     <CommandItem>
-//         <span>Settings</span>
-//     </CommandItem>
-// </CommandGroup>

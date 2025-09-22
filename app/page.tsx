@@ -18,7 +18,10 @@ export default function Home() {
                             UAB para estudantes de Engenharia Informática
                         </p>
 
-                        <SearchModal useClass={false}>
+                        <SearchModal
+                            useClass={false}
+                            shouldKbdShortcutTrigger={false}
+                        >
                             <div className='group flex items-center bg-card-background hover:bg-gradient-to-r hover:from-accent/50 hover:to-background/50 mx-auto px-2 border-1 rounded-md w-sm md:w-md lg:w-lg h-10 transition-colors duration-300 cursor-text'>
                                 <p className='w-full text-center'>
                                     O que deseja encontrar?
