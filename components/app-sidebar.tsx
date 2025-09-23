@@ -33,7 +33,7 @@ import {
 import Link from 'next/link';
 import { InlineCode } from './typography';
 import { isIos } from '@/lib/utils';
-import { NAV_LINKS as data } from '@/static/nav-links';
+import { NAV_LINKS as data } from '@/data/nav-links';
 import { SearchModal } from './search-modal';
 import { usePathname } from 'next/navigation';
 

@@ -42,7 +42,7 @@ Para garantir que o wiki se mantém atualizado e pesquisável, siga estas instru
     - O ficheiro de dados deve exportar **uma constante default** com o nome `<pagename>Data`.
     - Esta constante deve respeitar o tipo `FuseWikiDataType`.
     - O conteúdo deve ser uma **array de todas as frases** presentes no texto atualizado.
-    - Se estiver a criar um **novo ficheiro `data.ts`**, deve também importá-lo em `static/search-data.ts` e garantir que seja adicionado ao **array de exportação `ALL_PAGES`**.
+    - Se estiver a criar um **novo ficheiro `data.ts`**, deve também importá-lo em `data/search-data.ts` e garantir que seja adicionado ao **array de exportação `ALL_PAGES`**.
 
 3. **Boas práticas:**
 
@@ -70,7 +70,7 @@ Para garantir que o wiki se mantém atualizado e pesquisável, siga estas instru
 
 -   Todo o conteúdo deve estar **sincronizado** entre `page.tsx` e `data.ts`.
 -   Use **constantes default** e **arrays de frases** para os ficheiros de dados.
--   Se criar novos ficheiros de dados, **importá-los em `static/search-data.ts`** e adicioná-los a `ALL_PAGES`.
+-   Se criar novos ficheiros de dados, **importá-los em `data/search-data.ts`** e adicioná-los a `ALL_PAGES`.
 -   Contribuições de código devem respeitar **TS/Next.js**, ser bem documentadas e seguir boas práticas.
 
 Obrigado por contribuir e ajudar a manter o Wiki organizado e funcional!

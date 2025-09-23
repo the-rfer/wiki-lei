@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
-import { NAV_LINKS, type NavItem } from '@/static/nav-links';
+import { NAV_LINKS, type NavItem } from '@/data/nav-links';
 
 export function cn(...inputs: ClassValue[]) {
     return twMerge(clsx(inputs));

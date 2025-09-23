@@ -1,7 +1,7 @@
 'use client';
 
 import Fuse from 'fuse.js';
-import { ALL_PAGES as pages } from '@/static/search-data';
+import { ALL_PAGES as pages } from '@/data/search-data';
 
 export type SearchWikiResult =
     | {
