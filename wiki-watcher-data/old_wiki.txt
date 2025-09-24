@@ -1,0 +1,529 @@
+Categoria:Engenharia Informática - Wiki Universidade Aberta
+Entrar
+Toggle navigation
+Navegação
+Início
+Página Principal Wiki
+Doutoramentos
+Algebra Computacional
+Educação
+Estudo Portugueses
+História
+Media-Arte Digital
+Sustentabilidade e Desenvolvimento
+Mestrados
+D.C.T.
+Bioestatística e Biometria
+Cidadania Ambiental e Participação
+Ciências do Consumo Alimentar
+Engenharia Informática e Tecnologia Web
+Estatística, Matemática e Computação
+Informação e Sistemas Empresariais
+Tecnologias e Sistemas Informáticos Web
+D.C.S.G.
+Relações Interculturais
+D.E.E.D.
+D.H.
+Licenciaturas
+Ciências da Informação e da Documentação
+Ciências do Ambiente
+Ciências Sociais
+Educação
+Engenharia Informática
+Estudos Artísticos
+Estudos Europeus
+Gestão
+História
+Humanidades
+Informática
+Línguas Aplicadas
+Matemática e Aplicações
+CQES
+Português
+Ciências da Natureza
+Filosofia
+História
+Inglês
+Matemática
+Sociologia
+T.I.C.
+Opções
+Mudanças recentes
+Página aleatória
+Informações
+Contacte-nos
+Informações e dicas importantes
+Perguntas frequentes
+Categoria
+Discussão
+Ver código-fonte
+Histórico
+Ajuda
+Categoria:Engenharia Informática
+Da wiki Wiki Universidade Aberta
+Ir para:
+navegação
+,
+pesquisa
+Índice
+1
+Guia informativo Oficial
+2
+Plano de Estudos (Licenciatura em Engenharia Informática)
+2.1
+1º Ano
+2.2
+2º Ano
+2.3
+3º Ano
+3
+Guias sobre a Licenciatura em Engenharia Informática
+3.1
+Apresentação sobre a Licenciatura em Informática, pelo antigo aluno Ricardo Dias Marques
+4
+Precedências de Unidades Curriculares  Versão LEI
+4.1
+Licenciatura em Informática e Licenciatura em Engenharia Informática
+5
+Uma visão da LI 2016/2017 e a transição para a LEI
+6
+Recursos para estudantes
+7
+Avaliação
+7.1
+Versão 2024-2025
+7.2
+Versão antiga
+8
+Dúvidas e Questões Gerais
+8.1
+WISEflow
+9
+Calendário de Provas Presenciais e Online
+9.1
+Anos Anteriores
+10
+Grupos Sociais e outros
+10.1
+Associação Académica da Universidade Aberta
+10.2
+Grupo "UAb - INFORMÁTICA/ MATEMÁTICA" no Facebook
+10.3
+Rocket (chat) dos alunos da LEI (Licenciatura em Engenharia Informática) e da LMeA ("Licenciatura em Matemática e Aplicações")
+10.3.1
+Registo no Rocket Chat
+10.3.2
+Participar no Rocket Chat
+10.4
+Chat de alunos alternativo na Rede Social Telegram
+10.5
+Chat de alunos alternativo na Rede Social Discord
+10.6
+Equipa de LEI no Microsoft Teams (conta Office da UAb)
+11
+Descontos
+12
+Módulo de Ambientação Online
+12.1
+MAO 2020/2021
+13
+Apoio e Motivação
+13.1
+O Outro Lado do Estudo
+13.2
+Testemunho dos colegas que se inscrevem a todas as Unidades Curriculares
+13.3
+Ano actual 2020/2021
+Guia informativo Oficial
+Guia informativo da Licenciatura em Engenharia Informática
+Plano de Estudos (Licenciatura em Engenharia Informática)
+1º Ano
+1º Semestre
+2º Semestre
+Cód UC
+Descrição
+Cód UC
+Descrição
+21002
+Álgebra Linear l
+21177
+Modelação de Sistemas de Informação
+21010
+Arquitectura de Computadores
+21037
+Elementos de Probabilidades e Estatística
+21173
+Introdução à Programação
+21082
+Matemática Finita
+21174
+Sistemas Computacionais
+21178
+Laboratório de Programação
+21175
+Análise Infinitesimal
+21111
+Sistemas Operativos
+21176
+Ética e Práticas de Engenharia
+2º Ano
+1º Semestre
+2º Semestre
+Cód UC
+Descrição
+Cód UC
+Descrição
+21048
+Física Geral
+21179
+Laboratório de Desenvolvimento de Software
+21053
+Fundamentos de Bases de Dados
+21046
+Estruturas de Dados e Algoritmos Fundamentais
+21078
+Linguagens e Computação
+21071
+Introdução à Inteligência Artificial
+21093
+Programação por Objetos
+21076
+Investigação Operacional
+21106
+Sistemas em Rede
+21077
+Linguagens de Programação
+3º Ano
+1º Semestre
+2º Semestre
+Cód UC
+Descrição
+Cód UC
+Descrição
+21020
+Computação Gráfica
+21182
+Laboratório de Sistemas e Serviços Web
+21180
+Computação Numérica
+21018
+Compilação
+21103
+Sistemas de Gestão de Bases de Dados
+21184
+Projeto de Engenharia Informática
+21062
+Gestão de Projetos Informáticos
+21097
+Raciocínio e Representação do Conhecimento
+21110
+Sistemas Multimédia
+21108
+Sistemas Distribuídos
+21181
+Segurança em Redes e Computadores
+De forma a apoiar os Alunos na componente de matemática, a UAb criou a disciplina opcional de
+Matemática Preparatória
+Guias sobre a Licenciatura em Engenharia Informática
+Apresentação sobre a Licenciatura em Informática, pelo antigo aluno Ricardo Dias Marques
+Ricardo Dias Marques
+(Licenciado em Informática pela UAb) deu uma Apresentação, no evento "
+InforAbERTA 2017
+", sobre o percurso, desse antigo aluno, na "LI" ("Licenciatura em Informática") da UAb (a LI foi substituída, mais tarde, pela Licenciatura em Engenharia Informática).
+A apresentação chama-se
+“Testemunho de um Recém-Licenciado em Informática pela Universidade Aberta ( ... com uma 1a Licenciatura noutra Universidade )”
+A apresentação fornece várias informações incluindo, entre outras, múltiplos conselhos (para os Estudantes; para os Professores; para a Coordenação da Licenciatura em Informática; para a própria Universidade ... ) e estatísticas de conclusão de UCs (Unidades Curriculares) e de conclusão da Licenciatura em Informática, por parte dos Estudantes.
+A apresentação está disponível em
+https://drive.google.com/file/d/0B4wTVnDumNoNY1VGemZuNE9HdVk/view
+- e é acessível a partir da página de "
+Comunicações
+" da "InforAberta 2017" -
+https://sites.google.com/site/inforaberta2017/apresentacoes
+Precedências de Unidades Curriculares  Versão LEI
+Embora seja possível a escolha de qualquer UC, no respetivo semestre, inclui-se abaixo um diagrama de precedências que ajuda a organizar as escolhas. Esse diagrama NÃO é um documento oficial (foi elaborado por alunos). NÃO existe um regime obrigatório de precedências entre UCs (Unidades Curriculares) - salvo o caso especial da UC de "Projeto de Engenharia Informática" que é descrito no parágrafo seguinte. Assim, o diagrama abaixo ilustra apenas "precedências lógicas" entre UCs ("antes de frequentar a UC XPTO, convém ter frequentado primeiro a UC ABC...")
+A UC 21184 "Projeto de Engenharia Informática" tem um requisito especial. Assim - e conforme consta na secção de "Observações" da página da UC de  "
+Projeto de Engenharia Informática
+" do "Guia Informativo Oficial" - 
+"
+Os estudantes deverão ter concluídas todas as UC do 1º ano e pelo menos 90 ECTS nas áreas científicas de Engenharia Informática e Tecnologias de Informação e Comunicação antes de se inscreverem nesta unidade curricular do 3º ano.
+"
+O diagrama foi criado com base no documento
+Orientações de Inscrição nas Unidades Curriculares da Licenciatura em Informática
+, adaptado para a licenciatura em Engenharia Informática.
+Ficheiro do diagrama, editável em
+draw.io
+:
+Draw.io-Precedencias_LEI.zip
+Licenciatura em Informática e Licenciatura em Engenharia Informática
+Plano de estudo Alternativo de 5 Anos
+Plano de estudos Engenharia Informática (Diário da República)
+Plano de transição
+Ficheiro do diagrama, editável em
+draw.io
+:
+Draw.io-LI_e_LEI.zip
+Uma visão da LI 2016/2017 e a transição para a LEI
+Documento apresentado na InforAberta 2018
+Recursos para estudantes
+Existem alguns recursos disponíveis para os estudantes da UAb
+Email de estudante:
+É possível obter um email de estudante, que  permite depois acesso a ferramentas muito úteis.
+Para configurar o serviço, basta ver como
+configurar um correio eletrónico de estudante UAB
+.
+UAb Auto Signature
+Extensão de configuração de assinatura automática para os formulários do moodle da UAb para o Google Chrome
+Ferramenta do colega Miguel Gadelha
+(disponível aqui =>
+UAb Auto Signature
+)
+Canal youtube da comunidade estudarnauab - videos de apoio à edição de elementos na nossa wiki
+https://www.youtube.com/user/estudarnauab
+Apoio ao Estudo
+LaTeX
+Símbolos Matemáticos
+Curso Linux
+Comandos Linux
+Markdown pdf
+Notion - app online para organização do estudo
+PhET - Simulações Interativas área das Ciências e Matemática
+Outros repositórios
+Núcleo de estudantes de engenharia de telecomunicações e informática
+Informações e videos sobre áreas chave da nossa licenciatura
+Trabalhos para a Licenciatura em Informática - António Manuel Dias
+Compilação de e-fólios realizados por António Manuel Dias (colega da Licenciatura em Informática)
+Links úteis para recém-chegados
+Links úteis
+Avaliação
+No início do semestre (primeiras três semanas), pode-se optar entre dois tipos de avaliação, avaliação continua e avaliação exame. Na avaliação continua, terá de fazer dois efólios (online) e no final um efólio global (online). Caso opte por avaliação exame, terá apenas um exame (presencial ou em WiseFlow) no final do semestre. Caso não selecione uma opção de avaliação, será automaticamente selecionada a avaliação continua.
+Para mais informações, consulte
+Portal UAb
+.
+Versão 2024-2025
+Versão antiga
+draw.io-Avaliação.zip
+Ficheiro do diagrama, editável em
+draw.io
+:
+draw.io-Avaliação2022.zip
+Dúvidas e Questões Gerais
+WISEflow
+Informação Universidade aberta:
+Introdução rápida ao WISEflow
+Introdução para o principiante no WISEflow
+Informação UAb 2023
+Informação Externa à Universidade Aberta:
+Página Oficial do WISEflow 2023
+O que é o WISEflow?
+Introdução
+Calendário de Provas Presenciais e Online
+Mapa Lei_24/25, 2º Semestre ( atualizado a 21-02-2024)
+Mapa Lei_24/25, 1º Semestre ( atualizado a 21-09-2024)
+Calendário Provas Wiseflow (Atualizado a 17-09-2024)
+Mapa Lei_23/24, 1º Semestre - Atualizado (27-09-2023)
+Calendário Provas Presenciais 2023-2024 (Atualizado a 08-08-2023)
+Calendário Oficial 2023-2024
+Calendário Provas Presenciais 2022-2023 (Actualizado a 17-03-2023)
+Despacho Provas de Avaliação (30-09-2022)
+Mapa Lei 22-23 1º semestre (26-09-2022)
+Calendário Provas Presenciais 2022-2023 (Actualizado a 15-09-2022)
+Calendário Provas Presenciais 2021-2022 (Actualizado a 23-05-2022)
+Calendário Provas Presenciais 2020-2021 (Actualizado a 03-12-2020)
+Calendário Provas Presenciais 2020-2021 (Actualizado a 16-07-2020)
+Datas de Provas Presenciais 2019-2020(atualizado a 06-02-2020)
+Provas Especias 2020
+Provas escritas de Setembro 2020
+Anos Anteriores
+Licenciatura Engenharia Informática 2018/2019
+Licenciatura Engenharia Informática 2017/2018
+Licenciatura Informática 2017/2018
+Calendário de Provas Presenciais da Licenciatura em Informática 2016-2017
+Calendário de Provas Presenciais da Licenciatura em Informática 2015-2016
+Calendário de Provas Presenciais da Licenciatura em Informática 2014-2015
+Calendário de Provas Presenciais da Licenciatura em Informática 2013-2014
+Grupos Sociais e outros
+Associação Académica da Universidade Aberta
+Associação Académica da Universidade Aberta
+Grupo "UAb - INFORMÁTICA/ MATEMÁTICA" no Facebook
+"UAb - INFORMÁTICA/ MATEMÁTICA" no Facebook
+=> É necessário facultar o número de estudante e URL para a página do perfil no moodle ao fazer o pedido. Para saberes qual é o URL do teu perfil no Moodle, vai a
+https://elearning.uab.pt/my
+e depois clica na tua foto (no canto superior direito da página), escolhe "Perfil" e copia o link que está na barra do browser.
+Atenção
+: O URL do perfil no moodle tem o seguinte formato
+==> '
+https://elearning.uab.pt/user/profile.php?id=xxxxx'
+(em que '
+xxxxx'
+tipicamente é um número com 5 algarismos). Se na barra do browser o endereço não terminar com algarismos, deves ter uma opção por baixo da foto de perfil para "Restaurar página para os valores predefinidos". Clica nessa opção que o URL fica completo.
+Rocket (chat) dos alunos da LEI (Licenciatura em Engenharia Informática) e da LMeA ("Licenciatura em Matemática e Aplicações")
+Registo no Rocket Chat
+Para te registares no Rocket Chat, preenche o seguinte formulário:
+https://chat.estudarnauab.pt/register/qEKy8e5EvAKYS8X3q
+(em vigor a partir de 2022.04.16)
+Nesse formulário de registo que aparece,
+toma atenção ao seguinte:
+No campo de "
+Email
+" coloca o teu endereço de e-mail da UAb que tem o formato
+número-de-estudante@estudante.uab.pt
+No último campo que é o campo de "'
+Link do perfil da plataforma obrigatório ou Reason to join ou similar'
+" coloca o URL para o teu perfil no Moodle ("PlataformAberta") da UAb. Para saberes qual é o URL do teu perfil no Moodle, vai a
+https://elearning.uab.pt/my
+e depois clica na tua foto (no canto superior direito da página), seleciona Preferências, clica em Editar Perfil e  copia o link com o id ou só o id que está na barra do browser e constrói o URL com o formato abaixo indicado. (Caso não apareça o número do id, clicar na foto)
+Atenção
+: O URL do perfil no moodle tem o seguinte formato
+==> '
+https://elearning.uab.pt/user/profile.php?id=xxxxx'
+(em que '
+xxxxx'
+tipicamente é um número com 5 algarismos)
+Participar no Rocket Chat
+Quando o teu registo no Rocket chat for aceite, poderás participar na página:
+https://chat.estudarnauab.pt/
+Existem aplicações móveis para Android e iOS do Rocket.Chat :
+Android:
+"
+Rocket.Chat
+" -
+https://play.google.com/store/apps/details?id=chat.rocket.android&hl=pt_PT&gl=US
+"
+Rocket.Chat Experimental
+" -
+https://play.google.com/store/apps/details?id=chat.rocket.reactnative&hl=pt_PT&gl=US
+iOS:
+https://apps.apple.com/us/app/rocket-chat/id1148741252
+Chat de alunos alternativo na Rede Social Telegram
+Telegram
+- Chat de alunos alternativo na Rede Social Telegram
+Chat de alunos alternativo na Rede Social Discord
+Discord
+- Chat de alunos alternativo na Rede Social Discord
+Discord
+- Chat de alunos alternativo na Rede Social Discord Caloiros 23/24
+Equipa de LEI no Microsoft Teams (conta Office da UAb)
+Aceder ao Microsoft Teams com as credenciais da UAb e entrar na equipa chamada Grupo_LEI_UAb:
+https://www.microsoft.com/pt-pt/microsoft-teams/log-in?market=pt
+Descontos
+Usando o vosso endereço de email de estudante, conseguem alguns descontos.
+UAb - Serviços de Informática
+- SPSS, Microsoft Imagine, ArcGIS, Microsoft Office 365
+ISIC
+- Cartão Internacional de Estudante
+GitHub
+- Pack para estudantes
+JetBrains
+- Acesso grátis a todos os IDE para uso pessoal
+Spotify
+- Licença de estudante, desconto no valor e sem anúncios
+UNiDAYS
+- Desconto na Apple Music
+Amazon Prime Student
+- Desconto mensalidade
+(Não é válido em Portugal, mesmo Amazon.es só para residentes em Espanha (inf. 2023))
+Youtube Premium
+- Vantagens no YouTube, YouTube Music e YouTube Kids
+Ordem dos Engenheiros
+- Membro estudante
+OnTheHub
+- Desconto em software
+Coursera
+- Coursera para estudantes - (
+Já não é válido
+The Coursera for Students program ended on November 2, 2022
+)
+miro
+- Conta de estudante com equipa até 10 utilizadores
+Protocolos
+- Protocolos Nacionais
+Módulo de Ambientação Online
+MAO 2020/2021
+Modulo de Ambientação Online 2020/2021
+Testemunho 2020/2021
+Apoio e Motivação
+Apoio e Motivação Primeira vez 2020/2021
+O Outro Lado do Estudo
+O Avião
+Testemunho dos colegas que se inscrevem a todas as Unidades Curriculares
+Ano actual 2020/2021
+Motivação Inicial
+Fim de Semestre
+Páginas na categoria "Engenharia Informática"
+Esta categoria contém as seguintes 43 páginas (de um total de 43).
+A
+Análise Complexa
+Análise Infinitesimal
+Arquitectura de Computadores
+C
+Compilação
+Computação Gráfica
+Computação Numérica
+E
+Elementos de Análise Infinitesimal I
+Elementos de Análise Infinitesimal II
+Elementos de Análise Infinitesimal III
+Elementos de Análise Numérica
+Elementos de Probabilidades e Estatística
+Elementos de Álgebra
+Equações Diferenciais
+Estatística Computacional
+Estruturas de Dados e Algoritmos Fundamentais
+F
+Fundamentos de Bases de Dados
+Física Geral
+G
+Geometria
+Gestão de Projetos Informáticos
+H
+História da Matemática
+I
+Introdução à Inteligência Artificial
+Introdução à Programação
+Investigação Operacional
+L
+Laboratório de Desenvolvimento de Software
+Laboratório de Programação
+Laboratório de Sistemas e Serviços Web
+Linguagens de Programação
+Linguagens e Computação
+M
+Matemática Finita
+Modelação de Sistemas de Informação
+P
+Programação
+Programação por Objetos
+Projeto de Engenharia Informática
+R
+Raciocínio e Representação do Conhecimento
+S
+Segurança em Redes e Computadores
+Sistemas Computacionais
+Sistemas de Gestão de Bases de Dados
+Sistemas Distribuídos
+Sistemas em Rede
+Sistemas Multimédia
+Sistemas Operativos
+Á
+Álgebra Linear I
+É
+Ética e Práticas de Engenharia
+Obtida de "
+https://wiki.dcet.uab.pt/files/index.php?title=Categoria:Engenharia_Informática&oldid=9776
+"
+Categoria
+:
+Licenciaturas
+Páginas afluentes
+Alterações relacionadas
+Páginas especiais
+Versão para impressão
+Ligação permanente
+Informações da página
+Esta página foi modificada pela última vez à(s) 13h06min de 20 de setembro de 2025.
+Conteúdo disponibilizado nos termos da
+Creative Commons - Atribuição - Uso Não Comercial - Partilha nos Mesmos Termos
+, salvo indicação em contrário.
+Política de privacidade
+Sobre a wiki Wiki Universidade Aberta
+Exoneração de responsabilidade
