@@ -6,6 +6,7 @@ import apoioData from '@/app/(paginas)/(Comunidade e Apoio)/apoio/data';
 import faqData from '@/app/(paginas)/(Comunidade e Apoio)/faq/data';
 import gruposData from '@/app/(paginas)/(Comunidade e Apoio)/grupos/data';
 import planoEstudosData from '@/app/(paginas)/(Estrutura do Curso)/plano-estudos/data';
+import precedenciasUCData from '@/app/(paginas)/(Estrutura do Curso)/precedencias-uc/data';
 
 export const ALL_PAGES = [
     arquivoData,
@@ -16,4 +17,5 @@ export const ALL_PAGES = [
     faqData,
     gruposData,
     planoEstudosData,
+    precedenciasUCData,
 ];

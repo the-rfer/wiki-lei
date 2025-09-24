@@ -1,8 +1,8 @@
-import { FC } from 'react';
+import { FC, ReactElement } from 'react';
 
 interface Props {
     className?: string;
-    children: string;
+    children: string | (string | ReactElement)[];
 }
 
 const H1: FC<Props> = ({ className, children }) => {

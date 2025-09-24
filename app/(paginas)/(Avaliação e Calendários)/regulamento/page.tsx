@@ -1,7 +1,7 @@
 import { H1, H3 } from '@/components/typography';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
+import ImageWrapper from '@/components/image-wrapper';
 
 export const metadata: Metadata = {
     title: 'Regulamento e critérios de Avaliação - Wiki Lei',
@@ -37,7 +37,7 @@ export default function Page() {
                 </Link>
             </p>
             <H3 className='mt-4'>Versão 2024-2025</H3>
-            <Image
+            <ImageWrapper
                 src='https://wiki.dcet.uab.pt/files/images/4/4d/Avalia%C3%A7%C3%A3o_2024-2025.png'
                 alt='Fluxograma do processo de avaliação uab para o 1º ciclo'
                 height={800}
@@ -45,7 +45,7 @@ export default function Page() {
             />
             <hr className='bg-muted-foreground/50 my-4 rounded h-1' />
             <H3 className='mt-4'>Versão antiga</H3>
-            <Image
+            <ImageWrapper
                 src='https://wiki.dcet.uab.pt/files/images/d/d8/Avalia%C3%A7%C3%A3o2022.png'
                 alt='Fluxograma do processo de avaliação uab para o 1º ciclo - antigo'
                 height={800}
