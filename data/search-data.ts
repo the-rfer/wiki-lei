@@ -12,6 +12,7 @@ import guiaInformativoData from '@/app/(paginas)/(Informações Gerais)/guia-inf
 import historiaCursoData from '@/app/(paginas)/(Informações Gerais)/historia-curso/data';
 import dicasData from '@/app/(paginas)/(Recursos para Estudantes)/dicas/data';
 import ferramentasData from '@/app/(paginas)/(Recursos para Estudantes)/ferramentas/data';
+import maoData from '@/app/(paginas)/(Recursos para Estudantes)/mao/data';
 
 export const ALL_PAGES = [
     arquivoData,
@@ -28,4 +29,5 @@ export const ALL_PAGES = [
     historiaCursoData,
     dicasData,
     ferramentasData,
+    maoData,
 ];
