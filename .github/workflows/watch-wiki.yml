@@ -15,6 +15,9 @@ jobs:
             - name: Fetch Wiki Page
               run: curl -s "https://wiki.dcet.uab.pt/files/index.php/Categoria:Engenharia_Inform%C3%A1tica" -o wiki.html
 
+            - name: Install dependencies
+              run: pip install beautifulsoup4
+
             - name: Convert HTML to Text
               run: |
                   python3 - << 'EOF'
