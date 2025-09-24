@@ -10,6 +10,8 @@ import precedenciasUCData from '@/app/(paginas)/(Estrutura do Curso)/precedencia
 import apresentacaoLicenciaturaData from '@/app/(paginas)/(Informações Gerais)/apresentacao-licenciatura/data';
 import guiaInformativoData from '@/app/(paginas)/(Informações Gerais)/guia-informativo/data';
 import historiaCursoData from '@/app/(paginas)/(Informações Gerais)/historia-curso/data';
+import dicasData from '@/app/(paginas)/(Recursos para Estudantes)/dicas/data';
+import ferramentasData from '@/app/(paginas)/(Recursos para Estudantes)/ferramentas/data';
 
 export const ALL_PAGES = [
     arquivoData,
@@ -24,4 +26,6 @@ export const ALL_PAGES = [
     apresentacaoLicenciaturaData,
     guiaInformativoData,
     historiaCursoData,
+    dicasData,
+    ferramentasData,
 ];

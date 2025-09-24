@@ -43,7 +43,7 @@ export default function Page() {
                 height={800}
                 width={800}
             />
-            <hr className='bg-muted-foreground/50 my-4 rounded h-1' />
+            <hr className='my-4' />
             <H3 className='mt-4'>Versão antiga</H3>
             <ImageWrapper
                 src='https://wiki.dcet.uab.pt/files/images/d/d8/Avalia%C3%A7%C3%A3o2022.png'

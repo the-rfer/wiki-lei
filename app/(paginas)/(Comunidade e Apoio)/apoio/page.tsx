@@ -56,7 +56,7 @@ export default function Page() {
                     </li>
                 ))}
             </ul>
-            <hr className='bg-muted-foreground/50 my-4 rounded h-1' />
+            <hr className='my-4' />
             <H3>
                 Testemunho dos colegas que se inscrevem a todas as Unidades
                 Curriculares
