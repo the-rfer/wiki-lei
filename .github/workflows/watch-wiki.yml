@@ -1,0 +1,89 @@
+name: Watch Wiki Page
+
+on:
+    schedule:
+        - cron: '0 0 * * *'
+    workflow_dispatch:
+
+jobs:
+    check-wiki:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+
+            - name: Fetch Wiki Page
+              run: curl -s "https://wiki.dcet.uab.pt/files/index.php/Categoria:Engenharia_Inform%C3%A1tica" -o wiki.html
+
+            - name: Convert HTML to Text
+              run: |
+                  python3 - << 'EOF'
+                  from bs4 import BeautifulSoup
+                  with open("wiki.html", "r", encoding="utf-8") as f:
+                      html = f.read()
+                  soup = BeautifulSoup(html, "html.parser")
+                  text = soup.get_text("\n", strip=True)
+                  with open("wiki.txt", "w", encoding="utf-8") as f:
+                      f.write(text)
+                  EOF
+
+            - name: Compare Hash
+              id: check
+              run: |
+                  NEW_HASH=$(sha256sum wiki.txt | awk '{print $1}')
+                  echo "new_hash=$NEW_HASH" >> $GITHUB_OUTPUT
+
+                  if [ -f .last_hash ]; then
+                    OLD_HASH=$(cat .last_hash)
+                  else
+                    OLD_HASH=""
+                  fi
+
+                  if [ "$OLD_HASH" = "" ]; then
+                    echo "changed=first_run" >> $GITHUB_OUTPUT
+                  elif [ "$NEW_HASH" != "$OLD_HASH" ]; then
+                    echo "changed=true" >> $GITHUB_OUTPUT
+                  else
+                    echo "changed=false" >> $GITHUB_OUTPUT
+                  fi
+
+                  echo $NEW_HASH > .last_hash
+
+            - name: Persist hash
+              if: steps.check.outputs.changed != 'false'
+              run: |
+                  git config --global user.name "github-actions[bot]"
+                  git config --global user.email "github-actions[bot]@users.noreply.github.com"
+                  git add .last_hash
+                  git commit -m "Update last hash"
+                  git push
+
+            - name: Generate Diff
+              if: steps.check.outputs.changed == 'true'
+              run: |
+                  if [ -f old_wiki.txt ]; then
+                    diff -u old_wiki.txt wiki.txt > changes.diff || true
+                  else
+                    echo "No previous file to diff against" > changes.diff
+                  fi
+
+            - name: Save current wiki text
+              if: steps.check.outputs.changed != 'false'
+              run: cp wiki.txt old_wiki.txt
+
+            - name: Prepare Issue Body
+              if: steps.check.outputs.changed == 'true'
+              run: |
+                  echo "The following changes were detected in the last watch:" > issue.md
+                  echo "" >> issue.md
+                  echo '```diff' >> issue.md
+                  cat changes.diff >> issue.md
+                  echo '```' >> issue.md
+
+            - name: Create Issue
+              if: steps.check.outputs.changed == 'true'
+              uses: peter-evans/create-issue-from-file@v4
+              with:
+                  title: '[BOT] Changes to the wiki detected'
+                  content-filepath: ./issue.md
+                  labels: automated
