@@ -1,7 +1,7 @@
-const MODIFICAR: FuseWikiDataType = {
+const guiaInformativoData: FuseWikiDataType = {
     title: 'Guia Informativo Oficial',
     url: '/guia-informativo',
     content: ['Guia informativo da Licenciatura em Engenharia Informática'],
 };
 
-export default MODIFICAR;
+export default guiaInformativoData;
