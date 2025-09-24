@@ -1,6 +1,6 @@
 const gruposData: FuseWikiDataType = {
-    title: '',
-    url: '',
+    title: 'Grupos e Canais Sociais',
+    url: '/grupos',
     content: [
         'Associação Académica da Universidade Aberta',
         'Chat de alunos alternativo na Rede Social WhatsApp',
