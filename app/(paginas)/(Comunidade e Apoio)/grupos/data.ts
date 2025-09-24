@@ -1,7 +1,31 @@
-const MODIFICAR: FuseWikiDataType = {
+const gruposData: FuseWikiDataType = {
     title: '',
     url: '',
-    content: [],
+    content: [
+        'Associação Académica da Universidade Aberta',
+        'Chat de alunos alternativo na Rede Social WhatsApp',
+        'Chat de alunos alternativo na Rede Social Telegram',
+        'Chat de alunos alternativo na Rede Social Discord',
+        'Chat de alunos alternativo na Rede Social Discord Caloiros 23/24',
+        'Equipa de LEI no Microsoft Teams (conta Office da UAb)',
+        'Grupo "UAb - INFORMÁTICA/ MATEMÁTICA" no Facebook',
+        "É necessário facultar o número de estudante e URL para a página do perfil no moodle ao fazer o pedido. Para saberes qual é o URL do teu perfil no Moodle, vai a https://elearning.uab.pt/my e depois clica na tua foto (no canto superior direito da página), escolhe 'Perfil' e copia o link que está na barra do browser.",
+        'Atenção: O URL do perfil no moodle tem o seguinte formato ==> https://elearning.uab.pt/user/profile.php?id=xxxxx (em que xxxxx tipicamente é um número com 5 algarismos). Se na barra do browser o endereço não terminar com algarismos, deves ter uma opção por baixo da foto de perfil para Restaurar página para os valores predefinidos. Clica nessa opção que o URL fica completo.',
+        'Rocket (chat) dos alunos da LEI (Licenciatura em Engenharia Informática) e da LMeA ("Licenciatura em Matemática e Aplicações")',
+        'Para te registares no Rocket Chat, preenche o seguinte formulário: https://chat.estudarnauab.pt/register/qEKy8e5EvAKYS8X3q (em vigor a partir de 2022.04.16)',
+        'Nesse formulário de registo que aparece, toma atenção ao seguinte:',
+        "No campo de 'Email' coloca o teu endereço de e-mail da UAb que tem o formato número-de-estudante@estudante.uab.pt",
+        "No último campo que é o campo de 'Link do perfil da plataforma obrigatório ou Reason to join ou similar' coloca o URL para o teu perfil no Moodle ('PlataformAberta') da UAb. Para saberes qual é o URL do teu perfil no Moodle, vai a https://elearning.uab.pt/my e depois clica na tua foto (no canto superior direito da página), seleciona Preferências, clica em Editar Perfil e copia o link com o id ou só o id que está na barra do browser e constrói o URL com o formato abaixo indicado. (Caso não apareça o número do id, clicar na foto)",
+        'Atenção: O URL do perfil no moodle tem o seguinte formato ==> https://elearning.uab.pt/user/profile.php?id=xxxxx (em que xxxxx tipicamente é um número com 5 algarismos)',
+        'Participar no Rocket Chat',
+        'Quando o teu registo no Rocket chat for aceite, poderás participar na página: https://chat.estudarnauab.pt/',
+        'Existem aplicações móveis para Android e iOS do Rocket.Chat',
+        'Android:',
+        'Rocket.Chat',
+        'Rocket.Chat Experimental',
+        'iOS:',
+        'Rocket.Chat',
+    ],
 };
 
-export default MODIFICAR;
+export default gruposData;

@@ -56,8 +56,8 @@ const pageData = [
                         browser.
                     </P>
                     <P>
-                        <b>Atenção:</b> O URL do perfil no moodle tem o seguinte
-                        formato =={'>'}{' '}
+                        Atenção: O URL do perfil no moodle tem o seguinte
+                        formato:
                         &apos;https://elearning.uab.pt/user/profile.php?id=xxxxx&apos;
                         (em que &apos;xxxxx&apos; tipicamente é um número com 5
                         algarismos). Se na barra do browser o endereço não
@@ -109,7 +109,7 @@ const pageData = [
                         </P>
                         <P>
                             Atenção: O URL do perfil no moodle tem o seguinte
-                            formato =={'>'}
+                            formato:
                             &apos;https://elearning.uab.pt/user/profile.php?id=xxxxx&apos;
                             (em que &apos;xxxxx&apos; tipicamente é um número
                             com 5 algarismos)
@@ -161,39 +161,6 @@ export default function Page() {
                     </li>
                 ))}
             </ul>
-
-            {/* <ul className='space-y-2 my-4 list-disc list-inside'>
-                {pageData.motivacao.map((item, index) => (
-                    <li key={index}>
-                        <Link
-                            href={item.url}
-                            target='_blank'
-                            className='hover:underline'
-                        >
-                            {item.title}
-                        </Link>
-                    </li>
-                ))}
-            </ul>
-            <hr className='bg-muted-foreground/50 my-4 rounded h-1' />
-            <H3>
-                Testemunho dos colegas que se inscrevem a todas as Unidades
-                Curriculares
-            </H3>
-            <p className='mt-4 leading-7'>Ano actual 2020/2021</p>
-            <ul className='space-y-2 my-4 list-disc list-inside'>
-                {pageData.testemunhos.map((item, index) => (
-                    <li key={index}>
-                        <Link
-                            href={item.url}
-                            target='_blank'
-                            className='hover:underline'
-                        >
-                            {item.title}
-                        </Link>
-                    </li>
-                ))}
-            </ul> */}
         </div>
     );
 }

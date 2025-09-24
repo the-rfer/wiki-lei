@@ -4,6 +4,7 @@ import regulamentoData from '@/app/(paginas)/(Avaliação e Calendários)/regula
 import descontosData from '@/app/(paginas)/(Benefícios e Serviços)/descontos/data';
 import apoioData from '@/app/(paginas)/(Comunidade e Apoio)/apoio/data';
 import faqData from '@/app/(paginas)/(Comunidade e Apoio)/faq/data';
+import gruposData from '@/app/(paginas)/(Comunidade e Apoio)/grupos/data';
 
 export const ALL_PAGES = [
     arquivoData,
@@ -12,4 +13,5 @@ export const ALL_PAGES = [
     descontosData,
     apoioData,
     faqData,
+    gruposData,
 ];
