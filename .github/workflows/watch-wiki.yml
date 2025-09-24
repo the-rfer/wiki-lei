@@ -2,7 +2,7 @@ name: Watch Wiki Page
 
 on:
     schedule:
-        - cron: '0 0 * * *'
+        - cron: '0 0 * * *' # every 24h
     workflow_dispatch:
 
 jobs:
@@ -20,6 +20,7 @@ jobs:
 
             - name: Convert HTML to Text
               run: |
+                  mkdir -p wiki-watcher-data
                   python3 - << 'EOF'
                   from bs4 import BeautifulSoup
                   with open("wiki.html", "r", encoding="utf-8") as f:
@@ -33,11 +34,12 @@ jobs:
             - name: Compare Hash
               id: check
               run: |
+                  mkdir -p wiki-watcher-data
                   NEW_HASH=$(sha256sum wiki.txt | awk '{print $1}')
                   echo "new_hash=$NEW_HASH" >> $GITHUB_OUTPUT
 
-                  if [ -f .last_hash ]; then
-                    OLD_HASH=$(cat .last_hash)
+                  if [ -f wiki-watcher-data/.last_hash ]; then
+                    OLD_HASH=$(cat wiki-watcher-data/.last_hash)
                   else
                     OLD_HASH=""
                   fi
@@ -50,29 +52,16 @@ jobs:
                     echo "changed=false" >> $GITHUB_OUTPUT
                   fi
 
-                  echo $NEW_HASH > .last_hash
-
-            - name: Persist hash
-              if: steps.check.outputs.changed != 'false'
-              run: |
-                  git config --global user.name "github-actions[bot]"
-                  git config --global user.email "github-actions[bot]@users.noreply.github.com"
-                  git add .last_hash
-                  git commit -m "Update last hash"
-                  git push
+                  echo $NEW_HASH > wiki-watcher-data/.last_hash
 
             - name: Generate Diff
               if: steps.check.outputs.changed == 'true'
               run: |
-                  if [ -f old_wiki.txt ]; then
-                    diff -u old_wiki.txt wiki.txt > changes.diff || true
+                  if [ -f wiki-watcher-data/old_wiki.txt ]; then
+                    diff -U 0 wiki-watcher-data/old_wiki.txt wiki.txt > changes.diff || true
                   else
                     echo "No previous file to diff against" > changes.diff
                   fi
-
-            - name: Save current wiki text
-              if: steps.check.outputs.changed != 'false'
-              run: cp wiki.txt old_wiki.txt
 
             - name: Prepare Issue Body
               if: steps.check.outputs.changed == 'true'
@@ -82,6 +71,16 @@ jobs:
                   echo '```diff' >> issue.md
                   cat changes.diff >> issue.md
                   echo '```' >> issue.md
+
+            - name: Persist hash and snapshot
+              if: steps.check.outputs.changed != 'false'
+              run: |
+                  git config --global user.name "github-actions[bot]"
+                  git config --global user.email "github-actions[bot]@users.noreply.github.com"
+                  cp wiki.txt wiki-watcher-data/old_wiki.txt
+                  git add wiki-watcher-data/.last_hash wiki-watcher-data/old_wiki.txt
+                  git commit -m "Update wiki watcher data"
+                  git push
 
             - name: Create Issue
               if: steps.check.outputs.changed == 'true'
