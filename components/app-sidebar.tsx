@@ -9,6 +9,7 @@ import {
     BookMarked,
     GraduationCap,
     Globe,
+    MessageSquareQuote,
 } from 'lucide-react';
 import Image from 'next/image';
 import {
@@ -184,6 +185,14 @@ export function AppSidebar({ ...props }: ComponentProps<typeof Sidebar>) {
                                     <InlineCode>k</InlineCode>
                                 </div>
                             </SearchModal>
+                        </SidebarMenuButton>
+                    </SidebarMenuItem>
+                    <SidebarMenuItem>
+                        <SidebarMenuButton asChild>
+                            <Link href={'/contacto'}>
+                                <MessageSquareQuote />
+                                <span>Contactar</span>
+                            </Link>
                         </SidebarMenuButton>
                     </SidebarMenuItem>
                     <SidebarMenuItem>

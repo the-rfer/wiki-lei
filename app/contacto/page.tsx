@@ -1,7 +1,7 @@
 import SuggestionForm from '@/components/suggestion-form';
-import { Suspense } from 'react';
-import { H1 } from '@/components/typography';
+import { H1, P } from '@/components/typography';
 import Link from 'next/link';
+import { Suspense } from 'react';
 
 export default function Page() {
     return (
@@ -9,11 +9,11 @@ export default function Page() {
             <div className='w-full'>
                 <H1 className='mt-4'>Contacto</H1>
                 <div className='mt-6'>
-                    <p>
+                    <P>
                         Encontrou algum problema na wiki ou tem alguma sugestão?
                         Envie-nos uma mensagem!
-                    </p>
-                    <p>
+                    </P>
+                    <P>
                         Ao enviar uma mensagem está a criar um issue no
                         respositório deste projeto. <br />
                         Pode acompanhar todas as mensagens enviadas que se
@@ -21,12 +21,12 @@ export default function Page() {
                         <Link
                             href='https://github.com/the-rfer/wiki-lei/issues'
                             target='_blank'
-                            className='hover:underline'
+                            className='font-bold hover:underline'
                         >
                             clicando aqui
                         </Link>
                         .
-                    </p>
+                    </P>
                 </div>
                 <Suspense fallback={<div>Carregando formulário...</div>}>
                     <SuggestionForm />
@@ -35,5 +35,3 @@ export default function Page() {
         </section>
     );
 }
-
-// https://github.com/the-rfer/wiki-lei/issues

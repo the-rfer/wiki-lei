@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import LastUpdate from './last-update';
 
 export default function Footer() {
     return (
@@ -9,10 +10,8 @@ export default function Footer() {
                         Portal de Recursos LEI-UAB. Este é um projeto não
                         oficial criado por estudantes para estudantes.
                     </p>
-                    <p className='mt-2 text-muted-foreground text-xs'>
-                        <strong>Disclaimer:</strong> Este portal não substitui a
-                        consulta oficial da wiki e documentos da UAb.
-                    </p>
+                    <LastUpdate />
+
                     <div className='flex justify-center items-center mx-auto mt-2 w-full text-muted-foreground text-xs'>
                         <p>Encontrou um erro ou tem uma sugestão?</p>
                         <Link
@@ -22,6 +21,10 @@ export default function Footer() {
                             Clique aqui
                         </Link>
                     </div>
+                    <p className='mt-2 text-muted-foreground text-xs'>
+                        <strong>Disclaimer:</strong> Este portal não substitui a
+                        consulta oficial da wiki e documentos da UAb.
+                    </p>
                 </div>
             </div>
         </footer>
