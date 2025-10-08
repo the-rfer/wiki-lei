@@ -358,6 +358,10 @@ xxxxx'
 tipicamente é um número com 5 algarismos). Se na barra do browser o endereço não terminar com algarismos, deves ter uma opção por baixo da foto de perfil para "Restaurar página para os valores predefinidos". Clica nessa opção que o URL fica completo.
 Rocket (chat) dos alunos da LEI (Licenciatura em Engenharia Informática) e da LMeA ("Licenciatura em Matemática e Aplicações")
 Registo no Rocket Chat
+Caros colegas, tenham em atenção que os colegas que administram o Rocket Chat são estudantes como vocês. Têm famílias para se dedicarem e UCs para estudarem.
+Assim sendo, por favor, respeitem o seu pouco tempo livre e
+não se esqueçam de indicar o perfil do Moodle na razão de inscrição
+!
 Para te registares no Rocket Chat, preenche o seguinte formulário:
 https://chat.estudarnauab.pt/register/qEKy8e5EvAKYS8X3q
 (em vigor a partir de 2022.04.16)
@@ -428,11 +432,6 @@ Ordem dos Engenheiros
 - Membro estudante
 OnTheHub
 - Desconto em software
-Coursera
-- Coursera para estudantes - (
-Já não é válido
-The Coursera for Students program ended on November 2, 2022
-)
 miro
 - Conta de estudante com equipa até 10 utilizadores
 Protocolos
@@ -509,7 +508,7 @@ Sistemas Operativos
 É
 Ética e Práticas de Engenharia
 Obtida de "
-https://wiki.dcet.uab.pt/files/index.php?title=Categoria:Engenharia_Informática&oldid=9776
+https://wiki.dcet.uab.pt/files/index.php?title=Categoria:Engenharia_Informática&oldid=9826
 "
 Categoria
 :
@@ -520,7 +519,7 @@ Páginas especiais
 Versão para impressão
 Ligação permanente
 Informações da página
-Esta página foi modificada pela última vez à(s) 13h06min de 20 de setembro de 2025.
+Esta página foi modificada pela última vez à(s) 23h06min de 7 de outubro de 2025.
 Conteúdo disponibilizado nos termos da
 Creative Commons - Atribuição - Uso Não Comercial - Partilha nos Mesmos Termos
 , salvo indicação em contrário.
