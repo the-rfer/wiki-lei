@@ -18,6 +18,7 @@ const gruposData: FuseWikiDataType = {
         "No último campo que é o campo de 'Link do perfil da plataforma obrigatório ou Reason to join ou similar' coloca o URL para o teu perfil no Moodle ('PlataformAberta') da UAb. Para saberes qual é o URL do teu perfil no Moodle, vai a https://elearning.uab.pt/my e depois clica na tua foto (no canto superior direito da página), seleciona Preferências, clica em Editar Perfil e copia o link com o id ou só o id que está na barra do browser e constrói o URL com o formato abaixo indicado. (Caso não apareça o número do id, clicar na foto)",
         'Atenção: O URL do perfil no moodle tem o seguinte formato ==> https://elearning.uab.pt/user/profile.php?id=xxxxx (em que xxxxx tipicamente é um número com 5 algarismos)',
         'Participar no Rocket Chat',
+        'Caros colegas, tenham em atenção que os colegas que administram o Rocket Chat são estudantes como vocês. Têm famílias para se dedicarem e UCs para estudarem. Assim sendo, por favor, respeitem o seu pouco tempo livre e não se esqueçam de indicar o perfil do Moodle na razão de inscrição!',
         'Quando o teu registo no Rocket chat for aceite, poderás participar na página: https://chat.estudarnauab.pt/',
         'Existem aplicações móveis para Android e iOS do Rocket.Chat',
         'Android:',

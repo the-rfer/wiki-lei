@@ -1,4 +1,5 @@
 import { H1, H4, P } from '@/components/typography';
+
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -76,6 +77,16 @@ const pageData = [
         url: 'https://chat.estudarnauab.pt/register/qEKy8e5EvAKYS8X3q',
         notes: () => (
             <div className='my-2'>
+                <P>
+                    Caros colegas, tenham em atenção que os colegas que
+                    administram o Rocket Chat são estudantes como vocês. Têm
+                    famílias para se dedicarem e UCs para estudarem. Assim
+                    sendo, por favor, respeitem o seu pouco tempo livre e{' '}
+                    <b>
+                        não se esqueçam de indicar o perfil do Moodle na razão
+                        de inscrição!
+                    </b>
+                </P>
                 <P>
                     Para te registares no Rocket Chat, preenche o seguinte
                     formulário:
